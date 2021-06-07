@@ -5,6 +5,7 @@ then
     echo "example: $0 /irsa/env_file.env"
     exit 1
 fi
+export ENV_FILE=$1
 set -u
 aws sts assume-role-with-web-identity \
  --role-arn $AWS_ROLE_ARN \
