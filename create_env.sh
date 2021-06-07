@@ -20,4 +20,4 @@ export PGPASSWORD=$(aws rds generate-db-auth-token --host $PGHOST --port $PGPORT
 #echo "export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" >> $ENV_FILE
 #echo "export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" >> $ENV_FILE
 #echo "export AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}" >> $ENV_FILE
-echo "export PGPASSWORD=${PGPASSWORD}" >> $ENV_FILE
+echo "export PGPASSWORD=\"${PGPASSWORD}\"" >> $ENV_FILE
